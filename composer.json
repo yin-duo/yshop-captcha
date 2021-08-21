@@ -1,0 +1,33 @@
+{
+    "name": "yshop/yshop-captcha",
+    "description": "The yshop Captcha Package",
+    "license": "AGPL-3.0",
+    "authors": [
+        {
+            "name": "yshop",
+            "email": "dev@yin-duo.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.1.0",
+        "topthink/framework": "^6.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "yshop\\": "src/"
+        },
+        "files": [
+            "src/helper.php"
+        ]
+    },
+    "extra": {
+        "think": {
+            "services": [
+                "yshop\\CaptchaService"
+            ],
+            "config":{
+                "captcha": "src/config.php"
+            }
+        }
+    }
+}
